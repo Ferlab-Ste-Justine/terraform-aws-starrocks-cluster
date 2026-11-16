@@ -96,6 +96,7 @@ variable "frontends" {
     meta_gb         = optional(number, 50)
     private_ip      = optional(string)
     active_in_lb    = optional(bool, true)
+    additional_conf = optional(list(string), [])
   }))
 
   validation {

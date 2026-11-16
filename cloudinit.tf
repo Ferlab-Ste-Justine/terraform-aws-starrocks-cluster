@@ -40,7 +40,7 @@ module "fe_cloudinit" {
     seed_hosts      = values(local.fe_fqdns)
     initial_cluster = each.value.initial_cluster
     shared_data     = local.shared_data
-    additional_conf = ["enable_udf = true"]
+    additional_conf = each.value.additional_conf
     ranger          = var.ranger
   }
 }
